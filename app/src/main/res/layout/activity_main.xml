@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gambar_putihabu"
+    tools:context=".MainActivity">
+
+
+    <EditText
+        android:id="@+id/cost"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:background="#5C595A"
+        android:ems="10"
+        android:hint="Cost Of Service"
+        android:inputType="textPersonName"
+        android:textColorHint="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.019"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/id_service"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="16dp"
+        android:text="How was the service ?"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.015"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cost" />
+
+    <RadioGroup
+        android:id="@+id/tip_percentage"
+        android:layout_width="410dp"
+        android:layout_height="126dp"
+        android:layout_margin="16dp"
+        android:layout_marginTop="40dp"
+        android:background="#C2CFD1"
+        android:text="Tip Percentage"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.47"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/id_service">
+
+        <RadioButton
+            android:id="@+id/rb_amazing"
+            android:layout_width="142dp"
+            android:layout_height="37dp"
+            android:checked="true"
+            android:text="Amazing (20%)" />
+
+        <RadioButton
+            android:id="@+id/good"
+            android:layout_width="144dp"
+            android:layout_height="38dp"
+            android:text="Good (18%)" />
+
+        <RadioButton
+            android:id="@+id/OK"
+            android:layout_width="129dp"
+            android:layout_height="wrap_content"
+            android:text="OK (15%)" />
+
+    </RadioGroup>
+
+    <LinearLayout
+        android:id="@+id/layoutbaru"
+        android:layout_width="536dp"
+        android:layout_height="51dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="36dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tip_percentage">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Round up tip?"
+            android:textColor="@color/material_dynamic_neutral0" />
+
+        <Switch
+            android:id="@+id/switch4"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content" />
+
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="404dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="4dp"
+        android:text="CALCULATE"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/layoutbaru" />
+
+    <TextView
+        android:id="@+id/amount"
+        android:layout_width="105dp"
+        android:layout_height="21dp"
+        android:layout_marginStart="268dp"
+        android:layout_marginTop="16dp"
+        android:text="Tip Amount"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/button" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="92dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/amount"
+        app:srcCompat="@drawable/images" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
